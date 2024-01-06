@@ -17,7 +17,13 @@ class Chat extends Pivot
         'dateAndTime', 
         'message', 
         'response',
+        'feedback_id'
     ];
 
+    
+    public function feedback()
+    {
+        return $this->belongsTo(Feedback::class);
+    }
 
 }

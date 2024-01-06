@@ -42,4 +42,13 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function chatingWithRoboChats() {
+        return $this->belongsToMany(RoboChat::class, 'chats', 'user_id', 'robochat_id')
+        ->withPivot('dateAndTime','message','response');
+    }
+
+    public function feedbacks() {
+        return $this->hasMany(Feedback::class);
+    }
 }

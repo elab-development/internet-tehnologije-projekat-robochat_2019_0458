@@ -15,4 +15,13 @@ class Feedback extends Model
         'user_id',  
         'feedbackType', 
     ];
+
+    public function user() {
+        return $this->belongsTo(User::class);
+    }
+
+    public function chats()
+    {
+        return $this->hasMany(Chat::class, 'feedback_id');
+    }
 }
