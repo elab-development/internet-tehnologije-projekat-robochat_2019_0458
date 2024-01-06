@@ -13,7 +13,7 @@ class RoboChat extends Model
 
     protected $fillable = [
         'robochat_name', 
-        'number_of_psitive_feedbacks',
+        'number_of_positive_feedbacks',
         'number_of_negative_feedbacks', 
     ];
 

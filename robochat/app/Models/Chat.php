@@ -14,7 +14,7 @@ class Chat extends Pivot
     protected $fillable = [
         'user_id', 
         'robochat_id', 
-        'dateAndTime', 
+        'timestamp', 
         'message', 
         'response',
         'feedback_id'

@@ -12,11 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('robochats', function (Blueprint $table) {
-            $table->integer('number_of_psitive_feedbacks');
+            $table->integer('number_of_positive_feedbacks');
             $table->integer('number_of_negative_feedbacks');
         });
         Schema::table('chats', function (Blueprint $table) {
-            $table->string('response',50);
+            $table->string('response',500);
         });
     }
 
@@ -26,7 +26,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('robochats', function (Blueprint $table) {
-            $table ->dropColumn('number_of_psitive_feedbacks');
+            $table ->dropColumn('number_of_positive_feedbacks');
             $table ->dropColumn('number_of_negative_feedbacks');
         });
         Schema::table('chats', function (Blueprint $table) {

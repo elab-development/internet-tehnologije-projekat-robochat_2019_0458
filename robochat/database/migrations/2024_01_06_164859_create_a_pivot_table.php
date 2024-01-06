@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('chats', function (Blueprint $table) {
             $table->id();
             $table->timestamp('dateAndTime');
-            $table->string('message',50);
+            $table->string('message',500);
             $table->timestamps();
         });
     }
