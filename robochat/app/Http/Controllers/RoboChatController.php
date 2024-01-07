@@ -8,14 +8,27 @@ use App\Http\Resources\RoboChatResource;
 use App\Models\RoboChat;
 use Illuminate\Support\Facades\Validator;
 
+use Illuminate\Support\Facades\Cache;
+
 class RoboChatController extends Controller
 {
     public function index()
     {
-        $robochat = RoboChat::all();
-        return RoboChatResource::collection($robochat);
+        $robochats = Cache::remember('all_robochats', now()->addDay(), function () {
+            return RoboChat::all();
+        });
+        return RoboChatResource::collection($robochats);
     }
+    
 
+    public function showCachedRoboChats()
+    {
+        $cachedRoboChats = Cache::get('all_robochats');
+    
+        return response()->json([
+            'cached_robochats' => $cachedRoboChats
+        ], 200);
+    }
 
     public function show($id)
     {

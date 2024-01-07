@@ -38,6 +38,9 @@ Route::get('feedbacks/{id}', [FeedbackController::class, 'show']);
 Route::get('chats', [ChatController::class, 'index']);
 Route::get('chats/{id}', [ChatController::class, 'show']);
 
+Route::get('/cached-robochats', [RoboChatController::class, 'showCachedRoboChats']);
+
+
 Route::group(['middleware' => ['auth:sanctum']], function () {
 
     Route::post('chats', [ChatController::class, 'store']);
