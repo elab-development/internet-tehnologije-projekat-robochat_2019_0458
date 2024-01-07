@@ -49,6 +49,8 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 
     Route::post('feedbacks', [FeedbackController::class, 'store']);
 
+    Route::get('/export-chats-to-excel', [ChatController::class, 'exportToExcel']);
+
 
     Route::post('logout', [AuthController::class, 'logout']);
 });

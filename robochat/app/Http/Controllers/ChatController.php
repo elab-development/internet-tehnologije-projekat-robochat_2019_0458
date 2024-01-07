@@ -12,6 +12,10 @@ use Illuminate\Support\Facades\Validator;
 
 use Illuminate\Support\Facades\Auth;
 
+
+use App\Exports\ChatExport;
+use Maatwebsite\Excel\Facades\Excel;
+
 class ChatController extends Controller
 {
     
@@ -104,5 +108,11 @@ class ChatController extends Controller
         $chat = Chat::findOrFail($id);
         $chat->delete();
         return response()->json('CHAT IS SUCCESSFULY DELETED!');
+    }
+
+
+
+    public function exportToExcel(){
+        return Excel::download(new ChatExport, 'robochat-chat-records.xlsx');
     }
 }
