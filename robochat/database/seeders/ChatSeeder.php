@@ -68,7 +68,7 @@ class ChatSeeder extends Seeder
 
         foreach ($Ids as $robochat_id) {
             $robochat = RoboChat::find($robochat_id);
-            $numberOfCalls1 = $robochat->number_of_psitive_feedbacks;
+            $numberOfCalls1 = $robochat->number_of_positive_feedbacks;
             $numberOfCalls2 = $robochat->number_of_negative_feedbacks;
 
             $feedbackPositive = Feedback::where('user_id', 2)->first();

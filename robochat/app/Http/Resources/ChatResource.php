@@ -18,11 +18,10 @@ class ChatResource extends JsonResource
     public function toArray(Request $request): array
     {
 
-        $user = User::find($this->resource->pivot->user_id);
-        $robochat = RoboChat::find($this->resource->pivot->robochat_id);
+        $user = optional(User::find($this->user_id));
+        $robochat = optional(RoboChat::find($this->robochat_id));
 
         return [
-            'ID: ' => $this->resource->id,
             'MESSAGE: ' => $this->resource->message,
             'RESPONSE: ' => $this->resource->response,
             'DATE AND TIME OF CHAT: ' => $this->resource->timestamp,

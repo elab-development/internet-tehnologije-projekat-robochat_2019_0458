@@ -18,7 +18,7 @@ class RoboChatFactory extends Factory
     {
         return [
             'robochat_name' => $this->faker->name(), 
-            'number_of_psitive_feedbacks' => $this->faker->numberBetween($min = 0, $max = 3),
+            'number_of_positive_feedbacks' => $this->faker->numberBetween($min = 0, $max = 3),
             'number_of_negative_feedbacks' => $this->faker->numberBetween($min = 0, $max = 3), 
         ];
     }

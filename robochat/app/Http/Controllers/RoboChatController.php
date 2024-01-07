@@ -47,7 +47,7 @@ class RoboChatController extends Controller
 
 
 
-    public function updateRoboChatName(Request $request, $id)
+    public function update(Request $request, $id)
      {
          $request->validate([
             'robochat_name' => 'required',
@@ -64,7 +64,7 @@ class RoboChatController extends Controller
 
     public function destroy($id)
     {
-        $robochat = robochat::findOrFail($id);
+        $robochat = RoboChat::findOrFail($id);
         $robochat->delete();
         return response()->json('ROBOCHAT SUCCESSFULY DELETED!');
     }

@@ -43,9 +43,9 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
-    public function chatingWithRoboChats() {
+    public function robochats() {
         return $this->belongsToMany(RoboChat::class, 'chats', 'user_id', 'robochat_id')
-        ->withPivot('dateAndTime','message','response');
+        ->withPivot('timestamp','message','response', 'feedback_id');
     }
 
     public function feedbacks() {

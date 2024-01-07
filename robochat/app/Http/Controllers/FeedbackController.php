@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Resources\FeedbackResource;
 use App\Models\Feedback;
 use App\Models\Chat;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
 
 class FeedbackController extends Controller
 {
@@ -25,6 +27,7 @@ class FeedbackController extends Controller
 
     public function store(Request $request)
     {
+    $user_id = Auth::user()->id; 
     $validator = Validator::make($request->all(), [
         'feedbackType' => 'required|in:Positive,Negative',
         'chat_id' =>'required'
@@ -39,10 +42,12 @@ class FeedbackController extends Controller
     $feedback->feedbackType = $request->feedbackType;
     $feedback->user_id = $user_id;
 
-    $chat = Chat::findOrFail($request->chat_id);
-    $chat->feedback_id = $feedback->id;
 
     $feedback->save();
+
+    $chat = Chat::findOrFail($request->chat_id);
+    $chat->feedback_id = $feedback->id;
+    $chat->save();
 
     return response()->json(['SUCCESSFULY LEFT A '.$feedback->feedbackType.' FEEDBACK!!!',
          new FeedbackResource($feedback)]);

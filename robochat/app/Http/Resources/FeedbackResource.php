@@ -24,7 +24,7 @@ class FeedbackResource extends JsonResource
     public function getFeedbackType(): array
     {
         return [
-            $this->resource->feedbackType,
+            'FEEDBACK TYPE: ' => $this->resource->feedbackType,
         ];
     }
 }

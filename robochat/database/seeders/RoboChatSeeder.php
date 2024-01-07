@@ -16,13 +16,13 @@ class RoboChatSeeder extends Seeder
     {
         RoboChat::create([
             'robochat_name' => "Robot 1",
-            'number_of_psitive_feedbacks' => 2,
+            'number_of_positive_feedbacks' => 2,
             'number_of_negative_feedbacks' => 1,
         ]);
 
         RoboChat::create([
             'robochat_name' => "Robot 2",
-            'number_of_psitive_feedbacks' => 1,
+            'number_of_positive_feedbacks' => 1,
             'number_of_negative_feedbacks' => 3,
         ]);
 

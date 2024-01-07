@@ -17,8 +17,8 @@ class RoboChat extends Model
         'number_of_negative_feedbacks', 
     ];
 
-    public function chatingWithUsers() {
+    public function users() {
         return $this->belongsToMany(User::class, 'chats', 'robochat_id', 'user_id')
-        ->withPivot('dateAndTime','message','response');
+        ->withPivot('timestamp','message','response', 'feedback_id');
     }
 }
