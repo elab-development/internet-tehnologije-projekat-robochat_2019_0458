@@ -24,6 +24,9 @@ use App\Http\Controllers\ChatController;
 Route::post('register', [AuthController::class, 'register']);
 Route::post('login', [AuthController::class, 'login']);
 
+Route::post('resetPassword',[AuthController::class,'resetPassword']);
+
+
 Route::get('users', [UserController::class, 'index']);
 Route::get('users/{id}', [UserController::class, 'show']); 
 
