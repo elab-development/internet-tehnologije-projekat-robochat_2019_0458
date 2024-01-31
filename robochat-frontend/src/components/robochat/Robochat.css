@@ -1,0 +1,29 @@
+.robochat-stranica {
+    background: url('https://c4.wallpaperflare.com/wallpaper/714/717/309/5bd0335a8c605-wallpaper-preview.jpg')center/cover no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-repeat: repeat;
+    height: 700px;
+    padding-top: 100px;
+    font-family: 'Source Code Pro', monospace;
+  }
+  
+  .robochat-tekst{
+    background: url('https://i.pinimg.com/originals/85/74/fa/8574fad05b72a689d836edc34377733a.gif')center/cover no-repeat;
+    width: 1300px;
+    height: 600px;
+    opacity: 0.98;
+    color: white;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;  
+  }
+  
+  .chatbot{
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
