@@ -2,7 +2,7 @@
 
 Aplikacija **BotAI** je razvijena koristeći MERN stack (MongoDB, Express.js, React.js, Node.js) i nudi interaktivne usluge veštačke inteligencije za psiho terapiju. Ključne tehnologije koje su korišćene u aplikaciji uključuju Socket.io za real-time komunikaciju, JokeAPI za generisanje šala, i Lottie Files za animacije, pružajući korisnicima dinamično i angažujuće iskustvo. Arhitektura aplikacije prati MVC (Model-View-Controller) patern, omogućavajući jasnu separaciju poslovne logike, korisničkog interfejsa i podataka. Autentifikacija korisnika je realizovana pomoću JWT (JSON Web Tokens) tokena, što osigurava siguran pristup i privatnost korisnika.
 
-![Logo](../internet-tehnologije-projekat-robochat_2019_0458/projekat/images/logo.png)
+![Logo](./projekat/images/logo.png)
 
 ## Glavne funkcionalnosti aplikacije BotAI:
 
@@ -29,10 +29,12 @@ Sve ove komponente zajedno čine BotAI snažnim alatom za digitalnu mentalnu pod
     npm install
 3. Udjite u direktorijum za server:
     ```bash
+    cd projekat
     cd server
     npm start
 4. Udjite u direktorijum za klijenta:
     ```bash
+    cd projekat
     cd server
     npm start
 5. Pokrenite aplikaciju u web pregledacu i pokrenite caskanje!
@@ -41,4 +43,4 @@ Sve ove komponente zajedno čine BotAI snažnim alatom za digitalnu mentalnu pod
 
 
 
-![Pocetna stranica](../internet-tehnologije-projekat-robochat_2019_0458/projekat/images/landing_page.png)
+![Pocetna stranica](./projekat/images/landing_page.png)
