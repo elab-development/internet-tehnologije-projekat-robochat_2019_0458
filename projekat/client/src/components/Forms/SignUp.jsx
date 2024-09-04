@@ -1,9 +1,9 @@
-import logo from "../../assets/images/main.png"; // Uvoz slike logotipa
+
 import { StyledBtn } from "../../assets/styles/ButtonElements"; // Uvoz stilizovanog dugmeta
 import { useForm } from "react-hook-form"; // Uvoz hook-a za rad sa formama
 import { Head, Form, Input, Formgroup, Linkspan, Footer, Para, Select } from "./FormElements"; // Uvoz stilizovanih elemenata forme
 import { Container, Wrapper } from "../../assets/styles"; // Uvoz stilizovanih komponenti za kontejner i obuhvat
-import { HandleImg, Logo } from "../HeroSection/HeroSectionElements"; // Uvoz stilizovanih elemenata za slike
+
 import api from "../../api/posts"; // Uvoz API-a za slanje zahteva
 
 export default function SignUp({ setisLoggedIn }) {
@@ -158,10 +158,6 @@ export default function SignUp({ setisLoggedIn }) {
               </Linkspan>
             </Footer>
           </div>
-
-          <HandleImg> {/* Obuhvat za prikaz slike logotipa */}
-            <Logo src={logo} /> {/* Prikaz logotipa */}
-          </HandleImg>
         </Wrapper>
       </Container>
     </>
