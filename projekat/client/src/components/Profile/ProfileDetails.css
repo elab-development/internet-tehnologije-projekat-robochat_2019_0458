@@ -1,0 +1,204 @@
+.profile-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+.profile-avatar {
+  width: 450px;
+  height: 450px;
+  border-radius: 20%;
+  border: 5px solid #F27BBD;
+  object-fit: cover;
+  box-shadow: 0 0 15px #F27BBD;
+  margin-right: 20px; /* Space between the avatar and the bio */
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.profile-name {
+  font-size: 30px;
+  font-weight: bolder;
+  margin-bottom: 10px;
+  color: #ffff;
+  font-family: Playwrite CU;
+}
+
+.profile-label {
+  font-size: 25px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: bolder;
+  color: #F27BBD;
+  font-family: Playwrite CU;
+}
+
+.profile-bio, .profile-email {
+  font-size: 20px;
+  color: #ffff;
+}
+
+/* Styling for the GIF box */
+.gif-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 550px; 
+  height: 550px; 
+  margin-left: 85px;
+  position: relative;
+}
+
+
+.gif-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 10%;
+  object-fit: cover; 
+  border: 5px solid lightblue; 
+  box-shadow: 0 0 15px lightblue; 
+}
+
+
+.profile-avatar-container {
+  position: relative;
+}
+
+.profile-avatar {
+  width: 450px;
+  height: 450px;
+  border-radius: 20%;
+  border: 5px solid #F27BBD;
+  object-fit: cover;
+  box-shadow: 0 0 15px #F27BBD;
+}
+
+.profile-avatar-container button {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f27bbd;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: none; /* Initially hidden */
+}
+
+.profile-avatar-container:hover button {
+  display: block; /* Show button on hover */
+}
+/* Modal background */
+.modal-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Modal content */
+.modal-content {
+  background-color: #874CCC;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Modal field */
+.modal-field {
+  margin-bottom: 15px;
+}
+
+.modal-field label {
+  color: #fff;
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Modal buttons */
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.modal-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.modal-buttons button:first-child {
+  background: #C65BCF;
+  color: white;
+  font-family: "Sora", sans-serif;
+  font-weight: bolder;
+  border: 1rem;
+  border-radius: 1rem 2rem 3rem 4rem;
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: #F27BBD;
+    color: #fff;
+        border-radius: 4rem 3rem 2rem 1rem;
+  }
+}
+
+.modal-buttons button:last-child {
+  background-color: #ccc;
+  color: black;
+  font-family: "Sora", sans-serif;
+  font-weight: bolder;
+  border: 1rem;
+  border-radius: 1rem 2rem 3rem 4rem;
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: #6f0707;
+    color: #fff;
+        border-radius: 4rem 3rem 2rem 1rem;
+  }
+}
+
+/* Styling for Edit Profile Info button */
+.edit-profile-info-button {
+  background: #874CCC;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+  height: 50px;
+  width: 300px;
+  font-size: 20px;
+  font-family: "Sora", sans-serif;
+  font-weight: bolder;
+  border: 1rem;
+  border-radius: 1rem 2rem 3rem 4rem;
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: #F27BBD;
+    color: #fff;
+        border-radius: 4rem 3rem 2rem 1rem;
+  }
+}
+
+.edit-profile-info-button:hover {
+  background-color: #e167a7;
+}
+
