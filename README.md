@@ -23,7 +23,7 @@ Sve ove komponente zajedno čine BotAI snažnim alatom za digitalnu mentalnu pod
 
 1. Klonirajte repozitorijum:
    ```bash
-   git clone git@github.com:elab-development/internet-tehnologije-projekat-chatbot_2020_1010.git
+   git clone https://github.com/elab-development/internet-tehnologije-projekat-robochat_2019_0458.git
 2. Instalirajte biblioteke:
     ```bash
     npm install

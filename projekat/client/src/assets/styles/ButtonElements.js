@@ -31,6 +31,3 @@ export const StyledBtn = styled.button`
     border-radius: 4rem 3rem 2rem 1rem; /* Adjust these values to your liking */
   }`;
 
-export const YellowColor = styled.span`
-  color: #7CB9E8;
-`;

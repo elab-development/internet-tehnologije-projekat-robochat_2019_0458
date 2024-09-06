@@ -1,4 +1,4 @@
-import { Head, Para, Subs, CapsLetter, Logo, HandleImg } from "./HeroSectionElements"; // Uvoz stilizovanih elemenata
+import { Head, Para, Subs, CapsLetter } from "./HeroSectionElements"; // Uvoz stilizovanih elemenata
 import { StyledBtn } from "../../assets/styles/ButtonElements"; // Uvoz stilizovanog dugmeta
 import { useAuth } from "../../hooks/useAuth"; // Uvoz hook-a za autentifikaciju
 import { Link } from "react-router-dom"; // Uvoz Link komponente iz react-router-dom za navigaciju

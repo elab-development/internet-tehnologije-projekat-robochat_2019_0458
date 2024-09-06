@@ -7,15 +7,11 @@ export default function ProfileDetails() {
   const [profile, setProfile] = useState({ bio: "", avatar: "" });
   const [updatedProfile, setUpdatedProfile] = useState({ bio: "", avatar: "" });
   const [showModal, setShowModal] = useState(false); // Control the pop-up modal visibility
-  const { user, token } = useAuth();
+  const { user } = useAuth();
 
   const getProfile = async () => {
     try {
-      const response = await api.get(`/profiles/${user.id}`, {
-        headers: {
-          "x-auth-token": token,
-        },
-      });
+      const response = await api.get(`/profiles/${user.id}`);
       setProfile(response.data);
     } catch (error) {
       console.error("Error fetching profile:", error);
@@ -38,11 +34,7 @@ export default function ProfileDetails() {
 
   const handleSave = async () => {
     try {
-      await api.put(`/profiles/${user.id}`, updatedProfile, {
-        headers: {
-          "x-auth-token": token,
-        },
-      });
+      await api.put(`/profiles/${user.id}`, updatedProfile);
       setProfile(updatedProfile);
       setShowModal(false); // Close the modal after saving
     } catch (error) {

@@ -1,7 +1,6 @@
 import "./DashboardGUI.css";
 import React, { Fragment, useState, useEffect } from "react";
 import api from "../../api/posts"; // Adjust the path according to your API tool
-import { useAuth } from "../../hooks/useAuth";
 import { Pie } from "react-chartjs-2";
 import { Chart as ChartJS, Title, Tooltip, Legend, ArcElement } from "chart.js";
 import usePieData from "../../hooks/usePieData";
@@ -22,16 +21,11 @@ export default function DashboardGUI() {
   });
   const [currentPage, setCurrentPage] = useState(1);
   const usersPerPage = 2; // Number of users per page
-  const { token } = useAuth(); // Use authentication token from hook
 
   // Function to fetch users from the server
   const getUsers = async () => {
     try {
-      const response = await api.get("/users", {
-        headers: {
-          "x-auth-token": token,
-        },
-      });
+      const response = await api.get("/users");
       setUsers(response.data);
     } catch (error) {
       console.error("Error fetching users:", error);
@@ -41,11 +35,7 @@ export default function DashboardGUI() {
   // Function to delete a user
   const handleDelete = async (userId) => {
     try {
-      await api.delete(`/users/${userId}`, {
-        headers: {
-          "x-auth-token": token,
-        },
-      });
+      await api.delete(`/users/${userId}`);
       setUsers(users.filter((user) => user._id !== userId));
     } catch (error) {
       console.error("Error deleting user:", error);
@@ -64,11 +54,7 @@ export default function DashboardGUI() {
   // Function to update a user
   const handleUpdate = async () => {
     try {
-      await api.put(`/users/${editUserId}`, editUserData, {
-        headers: {
-          "x-auth-token": token,
-        },
-      });
+      await api.put(`/users/${editUserId}`, editUserData);
       getUsers();
       setEditUserId(null);
       setEditUserData({
@@ -145,10 +131,6 @@ export default function DashboardGUI() {
   };
 
   // Prepare data for pie chart
-  const genderCounts = users.reduce((acc, user) => {
-    acc[user.gender] = (acc[user.gender] || 0) + 1;
-    return acc;
-  }, {});
 
   const pieData = usePieData(users);
 
@@ -280,10 +262,6 @@ export default function DashboardGUI() {
                           setEditUserData({
                             name: user.name,
                             email: user.email,
-                            password: "",
-                            gender: user.gender,
-                            bio: user.profile?.bio || "",
-                            avatar: user.profile?.avatar || ""
                           });
                         }}
                         className="edit-btn"

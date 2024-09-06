@@ -8,9 +8,8 @@ const profileController = require("../controllers/profileController");
 // Ruta za dobijanje profila korisnika na osnovu ID-a korisnika
 router.get("/:userId", profileController.get_profile);
 
-// Ruta za kreiranje ili ažuriranje profila
-router.post("/", profileController.create_profile);
 
+//Ruta za azuriranje profila
 router.put("/:userId", profileController.update_profile);
 
 

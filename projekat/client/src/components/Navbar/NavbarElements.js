@@ -64,6 +64,3 @@ export const HandleLogo = styled.div`
   margin-left: 1.5rem;
   font-family: "Orbitron";
 `;
-export const YellowColor = styled.span`
-  color: #f9f871;
-`;

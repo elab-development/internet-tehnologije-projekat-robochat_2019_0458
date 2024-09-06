@@ -3,7 +3,7 @@ import { StyledBtn } from "../../assets/styles/ButtonElements"; // Uvoz stilizov
 import { useForm } from "react-hook-form"; // Uvoz hook-a za rad sa formama
 import { Container, Wrapper } from "../../assets/styles"; // Uvoz stilizovanih komponenti za kontejner i obuhvat
 import { useNavigate } from "react-router-dom"; // Uvoz hook-a za navigaciju
-import { HandleImg, Logo } from "../HeroSection/HeroSectionElements"; // Uvoz stilizovanih elemenata za slike
+import { HandleImg } from "../HeroSection/HeroSectionElements"; // Uvoz stilizovanih elemenata za slike
 import { Head, Form, Input, Formgroup, Linkspan, Footer, Para } from "./FormElements"; // Uvoz stilizovanih elemenata forme
 import { useAuth } from "../../hooks/useAuth"; // Uvoz hook-a za autentifikaciju
 import api from "../../api/posts"; // Uvoz API-a za slanje zahteva
