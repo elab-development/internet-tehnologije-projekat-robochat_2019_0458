@@ -1,0 +1,103 @@
+.o-nama-stranica {
+    height: 800px;
+    background: url('https://c4.wallpaperflare.com/wallpaper/714/717/309/5bd0335a8c605-wallpaper-preview.jpg')center/cover no-repeat;
+    padding: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.o-nama {
+    padding: 10px;
+    text-align: center;
+    background: linear-gradient(109.1deg, rgb(181, 73, 91) 7.1%, rgb(225, 107, 140) 86.4%);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    border-radius: 10px; 
+    max-width: 800px;
+    justify-items: center;
+    justify-content: center;
+}
+
+h1 {
+    color: white; 
+    font-weight: bolder;
+}
+
+h2 {
+    color: white; 
+    font-weight: bolder;
+}
+
+h3 {
+    color: white; 
+    font-weight: bolder;
+}
+
+p {
+    color: white; 
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+button {
+    background: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+    color: white;
+    font-weight: bolder;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-items: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    
+    background: linear-gradient(180.3deg, rgb(221, 221, 221) 5.5%, rgb(110, 136, 161) 90.2%);
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: linear-gradient(109.1deg, rgb(181, 73, 91) 7.1%, rgb(225, 107, 140) 86.4%);
+    padding: 100px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    position: absolute;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 40px;
+    color: white;
+}
+
+.close:hover {
+    color: #333;
+}
+
+.logo2{
+    padding-left: 120px;
+    width: 300px;
+    height: 280px;
+}

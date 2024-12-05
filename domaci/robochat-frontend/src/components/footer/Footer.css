@@ -1,0 +1,64 @@
+.footer {
+    background: linear-gradient(109.1deg, rgb(181, 73, 91) 7.1%, rgb(225, 107, 140) 86.4%);
+    color: #ECEBE9;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: aliceblue;
+}
+
+
+.salon-info {
+    padding-left: 50px;
+    text-align: left;
+    color: aliceblue;
+
+}
+
+.salon-info p{
+    color: aliceblue;
+
+}
+
+.back-to-top {
+    background-color: #4C8891;
+    color: #ECEBE9;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    margin-right: 60px;
+}
+
+.back-to-top:hover {
+    background-color: #29354B;
+}
+
+.arrow-icon {
+    margin-right: 5px;
+}
+
+a {
+    color: #A0C8C3;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.logo3{
+    padding-top: 50px;
+    width: 55px;
+    height: 50px;
+}
